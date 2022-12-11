@@ -1,9 +1,11 @@
 
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import toast from 'react-hot-toast';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsTelephone } from 'react-icons/bs';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Contact = () => {
 const form =useRef()
@@ -19,9 +21,14 @@ const form =useRef()
               console.log(error.text);
           });
         }
+
+        
+  useEffect(() => {
+    AOS.init({duration:1500});
+}, [])
     return (
         <div  className='mb-24'>
-            <h1 className='text-4xl text-center font-serif font-bold text-pink-500 animate-bounce'>Get In Touch</h1>
+            <h1 className='text-4xl text-center font-serif font-bold text-cyan-500 '>Get In Touch</h1>
             
             <p className='text-gray-400 text-center mb-10 text-xl'>Feel free to drop me a line - Contact me</p>
 
@@ -30,22 +37,22 @@ const form =useRef()
   <div className="hero-content flex-col lg:flex-row ">
     <div className="text-center lg:text-left lg:w-1/2 sm:w-full">
         
-    <div className="card w-96 bg2 text-neutral-content mb-10 hover:border-solid border-2 hover:border-pink-500  hover:animate-pulse">
+    <div className="card w-96 bb text-neutral-content mb-10 hover:border-solid border-2 border-cyan-500  hover:animate-pulse shadow-2xl" data-aos="zoom-in-right">
   <div className="card-body items-center text-center">
-    <h2 className="card-title text-2xl"><AiOutlineMail/></h2>
-    <h2 className="card-title">Email</h2>
-    <p>julianatonu@gmail.com</p>
-    <p className='text-sm text-pink-500'>send a message</p>
+    <h2 className="card-title text-2xl "><AiOutlineMail/></h2>
+    <h2 className="card-title ">Email</h2>
+    <p className=''>julianatonu@gmail.com</p>
+    <p className='text-sm text-cyan-500'>send a message</p>
    
   </div>
 </div>
 
-    <div className="card w-96 bg2 text-neutral-content shadow-lg  hover:border-solid border-2 hover:border-pink-500  hover:animate-pulse">
+    <div className="card w-96 bb text-neutral-content shadow-lg  hover:border-solid border-2 border-cyan-500  hover:animate-pulse" data-aos="zoom-in-right">
   <div className="card-body items-center text-center">
-    <h2 className="card-title text-2xl"><BsTelephone/></h2>
-    <h2 className="card-title">Phone</h2>
-    <p>+8801630438393</p>
-    <p className='text-sm text-pink-500'>send a message</p>
+    <h2 className="card-title text-2xl "><BsTelephone/></h2>
+    <h2 className="card-title ">Phone</h2>
+    <p className=''>+8801630438393</p>
+    <p className='text-sm text-cyan-500'>send a message</p>
    
   </div>
 </div>
@@ -53,29 +60,25 @@ const form =useRef()
 
     </div>
 
-    <div className="card flex-shrink-0 lg:w-1/2 sm:w-full shadow-2xl">
+    <div className="card flex-shrink-0 lg:w-1/2 sm:w-full ">
 
       <form  ref={form} onSubmit={sendEmail}>
         <div className="form-control my-3">
           
-          <input type="text" name='name' placeholder="Name" className="input input-secondary bg-transparent text-white" required/>
+          <input type="text" name='name' placeholder="Name" className="input input-primary bg-cyan-100 shadow-lg " required/>
         </div>
 
         <div className="form-control my-3">
          
-          <input type="text" name='email' placeholder="Email" className="input input-secondary bg-transparent text-white" required/>
+          <input type="text" name='email' placeholder="Email" className="input input-primary  bg-cyan-100 shadow-lg" required/>
         </div>
         
         <div className="form-control my-3 ">
-          {/* <label className="label">
-            <span className="label-text">Message</span>
-          </label> */}
-          
-          <textarea className="textarea textarea-secondary bg-transparent text-white" rows='7' name='message' placeholder="Message"></textarea>
+          <textarea className="textarea textarea-primary  bg-cyan-100 shadow-lg" rows='7' name='message' placeholder="Message"></textarea>
         </div>
 
-        <div className="form-control mt-6 w-36 justify-center lg:ml-64">
-          <button className="btn bg py-5 hover:animate-pulse">Contact Me</button>
+        <div className="form-control mt-6 w-36 justify-center lg:ml-44">
+          <button className="btn bg-cyan-100 text-black py-5 hover:animate-pulse  shadow-2xl">Contact Me</button>
         </div>
       </form>
     </div>

@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Lora:ital@1&display=swap');
 .bg{
-background:linear-gradient(rgb(221, 97, 136), rgb(243, 41, 122));
-
+background:linear-gradient(rgb(189, 222, 245), rgb(39, 196, 244));
+color: black;
 border: none;
 }
 
 .bg2{
     background: rgb(46, 23, 23);
+}
+
+.bb{
+    background-image: url('../../image/c2.jpg');
+}
+.fo{
+font-family: 'Lobster Two', cursive;
+}
+
+.fo2{
+    font-family: 'Lora', serif;
 }

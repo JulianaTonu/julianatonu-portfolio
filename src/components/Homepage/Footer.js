@@ -6,30 +6,36 @@ import {FaGithub} from 'react-icons/fa';
 
 const Footer = () => {
     return (
-   <div className='bg'>
-     <footer className="footer p-10  text-neutral-content">
+
+<footer className="footer footer-center p-10 bg mt-10 text-primary-content ">
   <div>
-    <h1 className='text-4xl font-sherif '>Juliana Tonu</h1>
-    <p>Dhaka, Bangladesh</p>
+ 
+  <div className='flex '>
+  
+  <a href="https://www.linkedin.com/in/juliana-tonu-65959a195/" target="_blank" className='text-white text-3xl mr-3  mb-3 hover:scale-105 duration-500 hover:text-cyan-700'><FaLinkedin/></a>
+  <a href="https://www.instagram.com/_____juliiiiiiiiiiiiiiii_____/" target="_blank" className='text-white text-3xl mr-3  mb-3 hover:scale-105 duration-500 hover:text-cyan-700'><FaInstagram></FaInstagram></a>
+  <a href="https://www.facebook.com/juliana.tonu"  target="_blank" className='text-white text-3xl mr-3  mb-3 hover:scale-105 duration-500 hover:text-cyan-700'><FaFacebook/></a>
+  <a href="https://github.com/JulianaTonu" target="_blank" className='text-white text-3xl mr-3  mb-3 hover:scale-105 duration-500 hover:text-cyan-700'><FaGithub/></a>
+  
+  
+  </div>
+    
+    <p>Designed and Developed by <span className='font-serif font-bold '>Juliana Tonu</span></p>
+    <p>Copyright © 2022 - All right reserved | Juliana Tonu</p>
   </div> 
   <div>
-    <span className="font-bold my-3 uppercase ml-20 text-xl text-white">Social</span> 
     <div className="grid grid-flow-col gap-4">
-    <a href="https://www.linkedin.com/in/juliana-tonu-65959a195/" target="_blank" className='text-white text-4xl mr-2  mb-6'><FaLinkedin/></a>
-  <a href="" target="_blank" className='text-white text-4xl mr-2  mb-6'><FaInstagram></FaInstagram></a>
-  <a href=""  target="_blank" className='text-white text-4xl mr-2  mb-6'><FaFacebook/></a>
-  <a href="https://github.com/JulianaTonu" target="_blank" className='text-white text-4xl mr-2  mb-6'><FaGithub/></a>
      
     </div>
   </div>
 </footer>
 
 
-<div className='text-center py-10 text-white text-xl'>
-<p>Copyright © 2022 - All right reserved | Juliana Tonu</p>
-</div>
 
-   </div>
+
+  
+
+   
     );
 };
 
